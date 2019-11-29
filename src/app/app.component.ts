@@ -1,13 +1,16 @@
-import { Component, ViewChild, ElementRef } from "@angular/core"; //
-1;
+import { Component, ViewChild, ElementRef } from "@angular/core"; 
+//1;
 @Component({
   selector: "simple-root",
   template: `
     <!-- 2: Applichiamo #eur -->
     <input type="text" placeholder="Inserisci il valore in euro" #eur />
     <button (click)="convert()">Converti</button>
+
     <!-- 3: Applichiamo #conversionRate -->
-    <p>Tasso di conversione EUR/USD <span #conversionRate>1.1379</span></p>
+    <p>Tasso di conversione EUR/USD 
+      <span #conversionRate>1.1379</span>
+    </p>
     <br />
     {{ usd | currency }}
   `
