@@ -17,8 +17,8 @@ import { Component, ViewChild, ElementRef } from "@angular/core";
 })
 export class AppComponent {
   // 4 Utilizziamo il decoratore @ViewChild
-  @ViewChild("eur") eurInputField: ElementRef;
-  @ViewChild("conversionRate") conversionRate: ElementRef;
+  @ViewChild("eur",{static: false}) eurInputField: ElementRef;
+  @ViewChild("conversionRate",{static: false}) conversionRate: ElementRef;
   usd = 0;
   convert() {
     const eur = parseFloat(this.eurInputField.nativeElement.value);
